@@ -8,12 +8,15 @@ public class EmployeeDetailsController {
 		static int password=8;
 		public static void showWindow() {
 			Scanner sc = new Scanner(System.in);
+			System.out.println("Please Enter the FirstName");
 			String firstName = sc.nextLine();
+			System.out.println("Please Enter the LastName");
 			String lastName = sc.nextLine();
 			Employee employee = new Employee(firstName,lastName);
 	CredentialService cred = new CredentialService();
 	System.out.println("Please Enter the Department from the following");
 	System.out.println("1. Technical\n2. Admin\n3. Human Resources\n4. Legal");
+	System.out.println("Select the option");
 	int option = sc.nextInt();
 	String email="";
 	String passwordDetails="";
