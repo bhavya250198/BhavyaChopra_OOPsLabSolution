@@ -5,7 +5,7 @@ import com.credentials.model.Employee;
 public class CredentialService {
 
 	public String generateEmail(Employee el,String department,String company ) {
-		String emailAddress = (el.getFirstName()+el.getLastName()+"@"+department+"."+company+"."+"com").toLowerCase();
+		String emailAddress = (el.getFirstName()+el.getLastName()+"@"+department+"."+company+"."+"com").toLowerCase().trim();
 		return emailAddress;
 		
 	}
