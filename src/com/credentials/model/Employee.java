@@ -1,4 +1,4 @@
-package projectJava;
+package com.credentials.model;
 
 public class Employee {
 	

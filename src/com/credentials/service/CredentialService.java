@@ -1,9 +1,11 @@
-package projectJavaService;
+package com.credentials.service;
 import java.util.*;
+
+import com.credentials.model.Employee;
 public class CredentialService {
 
-	public String generateEmail(String firstName,String lastName,String department,String company ) {
-		String emailAddress = (firstName+lastName+"@"+department+"."+company+"."+"com").toLowerCase();
+	public String generateEmail(Employee el,String department,String company ) {
+		String emailAddress = (el.getFirstName()+el.getLastName()+"@"+department+"."+company+"."+"com").toLowerCase();
 		return emailAddress;
 		
 	}
@@ -26,8 +28,8 @@ public class CredentialService {
 	        }
 	     return passwordDetails;
 	}
-	public void showCredentials(String email,String password) {
-		System.out.println("Dear User your Credentials are as follows");
+	public void showCredentials(Employee el,String email,String password) {
+		System.out.println("Dear"+" "+el.getFirstName()+" "+"your Credentials are as follows");
 		System.out.println("Email Address"+":"+email);
 		System.out.print("Password"+":"+password);
 		
